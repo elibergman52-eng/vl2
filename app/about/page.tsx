@@ -4,13 +4,36 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'About — Velvet Local',
-  description: 'Velvet Local was founded by an esthetician who has worked inside aesthetic practices. Boutique med spa marketing — custom, never templated.',
+  title: 'About Velvet Local | Med Spa Marketing by an Esthetician',
+  description: 'Velvet Local is a boutique marketing studio for aesthetic practices founded by an esthetician. Custom local search, reviews, and AI automations for solo and small-team practices.',
+  alternates: { canonical: 'https://velvetlocal.com/about' },
+  openGraph: {
+    url: 'https://velvetlocal.com/about',
+    title: 'About Velvet Local | Med Spa Marketing by an Esthetician',
+    description: 'Velvet Local is a boutique marketing studio for aesthetic practices founded by an esthetician. Custom local search, reviews, and AI automations.',
+  },
+}
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Michelle Bergman',
+  jobTitle: 'Founder & Esthetician',
+  worksFor: {
+    '@type': 'ProfessionalService',
+    name: 'Velvet Local',
+    url: 'https://velvetlocal.com',
+  },
+  description: 'Michelle Bergman is an esthetician and founder of Velvet Local, a boutique marketing agency for aesthetic practices.',
 }
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <Header />
 
       {/* ========================= HERO ========================= */}

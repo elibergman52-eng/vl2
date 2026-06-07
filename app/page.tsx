@@ -1,9 +1,58 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Accordion from '@/components/Accordion'
 import Carousel from '@/components/Carousel'
+
+export const metadata: Metadata = {
+  title: 'Med Spa Marketing Agency | Velvet Local',
+  description: 'Velvet Local fills aesthetic practice books with local search rankings, patient reviews, and AI automations. Built by an esthetician for solo and small-team practices. Free review revival included.',
+  alternates: { canonical: 'https://velvetlocal.com' },
+  openGraph: {
+    url: 'https://velvetlocal.com',
+    title: 'Med Spa Marketing Agency | Velvet Local',
+    description: 'Velvet Local fills aesthetic practice books with local search rankings, patient reviews, and AI automations. Built by an esthetician.',
+  },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What does a med-spa marketing agency actually do?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We build and manage the digital presence that brings patients to you — local search rankings, patient reviews, AI-powered automations, and the online infrastructure that turns searches into bookings. We work exclusively with aesthetic practices, so everything is specific to this industry.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is Velvet Local different from a general agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most agencies learn your industry from the outside. Velvet Local was founded by an esthetician who has worked inside aesthetic practices. That context changes everything — from what we prioritize to what we don\'t sell you.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why do recent reviews matter so much for ranking?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Reviews are a primary signal Google uses to rank local practices — and recency is weighted heavily, not just total count and star rating. A steady stream of fresh reviews signals an active, trusted practice and helps you hold a top-three Maps position.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What results can a med spa realistically expect?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most practices reach the top three on Google Maps within 60 to 90 days — some faster, some closer to four months. We set clear expectations in the first conversation and track against them.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is this a fixed package or customized?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Every engagement is custom. We discuss your goals, your market, your current online presence, and what\'s actually missing before recommending anything. You\'ll never pay for something your practice doesn\'t need.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'I\'m a solo injector with a small practice. Is this for me?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — Velvet Local was built for practices like yours. Solo and small-team aesthetic practices are our focus. Solo owners deserve a partner who understands their scale and their goals.' },
+    },
+  ],
+}
 
 const faqItems = [
   {
@@ -50,6 +99,10 @@ const differenceItems = [
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
 
       {/* ========================= HERO ========================= */}

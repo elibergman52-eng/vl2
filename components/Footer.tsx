@@ -31,8 +31,8 @@ export default function Footer() {
         <div>
           <div className="foot-h">The fine print</div>
           <div className="foot-links">
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms of service</a>
+            <a href="mailto:michelle@velvetlocal.com?subject=Privacy%20Policy">Privacy policy</a>
+            <a href="mailto:michelle@velvetlocal.com?subject=Terms%20of%20Service">Terms of service</a>
             <a href="mailto:michelle@velvetlocal.com?subject=Unsubscribe">Unsubscribe</a>
           </div>
         </div>

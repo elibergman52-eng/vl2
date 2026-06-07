@@ -5,8 +5,14 @@ import Footer from '@/components/Footer'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact — Velvet Local',
-  description: 'Book a free 15-minute call with Velvet Local. No pressure, no pitch deck — just a conversation about your practice.',
+  title: 'Book a Free Call | Velvet Local Med Spa Marketing',
+  description: 'Book a free 15-minute call about your practice\'s Google presence and ranking goals. Includes a free review revival offer. No pressure, no pitch deck.',
+  alternates: { canonical: 'https://velvetlocal.com/contact' },
+  openGraph: {
+    url: 'https://velvetlocal.com/contact',
+    title: 'Book a Free Call | Velvet Local Med Spa Marketing',
+    description: 'Book a free 15-minute call about your practice\'s Google presence. Includes a free review revival offer.',
+  },
 }
 
 export default function ContactPage() {

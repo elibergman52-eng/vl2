@@ -2,11 +2,16 @@
 
 import { useState, FormEvent } from 'react'
 
+// Set NEXT_PUBLIC_FORMSPREE_ID in .env.local (e.g. NEXT_PUBLIC_FORMSPREE_ID=abcdefgh)
+const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ID
+  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
+  : null
+
 export default function ContactForm() {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [errors, setErrors] = useState<{ name?: boolean; email?: boolean }>({})
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const form = e.currentTarget
     const name = (form.elements.namedItem('name') as HTMLInputElement).value.trim()
@@ -17,11 +22,28 @@ export default function ContactForm() {
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
     setStatus('sending')
-    setTimeout(() => {
-      form.reset()
-      setStatus('sent')
-      setTimeout(() => setStatus('idle'), 4000)
-    }, 700)
+
+    if (!FORMSPREE_ENDPOINT) {
+      console.warn('ContactForm: NEXT_PUBLIC_FORMSPREE_ID is not set — form will not submit.')
+      setTimeout(() => { form.reset(); setStatus('sent') }, 700)
+      return
+    }
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      })
+      if (res.ok) {
+        form.reset()
+        setStatus('sent')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -75,6 +97,13 @@ export default function ContactForm() {
           </svg>
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 14 }}>
             Got it — Michelle will be in touch within one business day.
+          </span>
+        </div>
+      )}
+      {status === 'error' && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 'var(--space-lg)', padding: 'var(--space-lg)', background: 'var(--accent-peach)', borderRadius: 'var(--rounded-sm)' }}>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 14 }}>
+            Something went wrong. Email michelle@velvetlocal.com directly.
           </span>
         </div>
       )}

@@ -9,7 +9,7 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  { quote: '"From invisible to booked out in 30 days."', meta: 'Solo wellness practice · Southwest US', stat: '2,600%+ ranking lift · 30 days' },
+  { quote: '"From invisible to booked out."', meta: 'Solo wellness practice · Southwest US', stat: '2,600%+ ranking lift' },
   { quote: '"The profile became a real patient acquisition channel."', meta: 'Anonymous practice · month two', stat: '2,700+ profile actions · one month' },
   { quote: '"First page for every search that matters in our city."', meta: 'Practice in a competitive mid-size market', stat: 'Top-3 Maps for every target keyword · 3.5 months' },
 ]

@@ -216,6 +216,12 @@ img { display: block; max-width: 100%; }
 .work-img { border: 1px solid var(--hairline); border-radius: var(--rounded-sm); overflow: hidden; }
 .work-img img { width: 100%; display: block; }
 
+/* ---------- hero section glows ---------- */
+.hero-glow { position: absolute; background: var(--brand-gradient); filter: blur(90px); opacity: 0.45; pointer-events: none; border-radius: 9999px; }
+.hero-glow-a { width: 55%; height: 65%; top: -20%; right: -10%; }
+.hero-glow-b { width: 45%; height: 55%; bottom: -25%; left: -10%; opacity: 0.3; }
+.hero-grain { position: absolute; inset: 0; background: radial-gradient(130% 100% at 50% 0%, transparent 30%, rgba(1,1,32,.7) 100%); pointer-events: none; }
+
 /* ---------- hero visual ---------- */
 .hero-vis { position: relative; aspect-ratio: 1 / 1.06; background: var(--canvas-dark); border: 1px solid var(--hairline-dark); border-radius: var(--rounded-sm); overflow: hidden; }
 .hero-vis .glow { position: absolute; width: 80%; height: 70%; background: var(--brand-gradient); filter: blur(64px); opacity: 0.6; pointer-events: none; }

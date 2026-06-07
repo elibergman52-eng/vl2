@@ -20,7 +20,7 @@ const faqItems = [
   },
   {
     question: 'What results can a med spa realistically expect?',
-    answer: 'It depends on your market, your starting point, and what we focus on. We\'ve seen practices go from invisible to top three on Google Maps within 30 days; others see steady growth over 60–90 days. We set clear expectations in the first conversation and track against them.',
+    answer: 'It depends on your market, your starting point, and what we focus on. Most practices reach the top three on Google Maps within 60 to 90 days — some faster, some closer to four months. We set clear expectations in the first conversation and track against them.',
   },
   {
     question: 'Is this a fixed package or customized?',
@@ -53,81 +53,25 @@ export default function HomePage() {
       <Header />
 
       {/* ========================= HERO ========================= */}
-      <section className="band band-light" style={{ paddingTop: 56, paddingBottom: 64 }}>
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'var(--space-5xl)', alignItems: 'center' }}>
-          <div>
-            <div className="eyebrow" style={{ color: 'var(--body)', marginBottom: 'var(--space-2xl)' }}>Med spa marketing · by an esthetician</div>
-            <h1 className="headline" style={{ fontSize: 60, lineHeight: 1.02, letterSpacing: '-1.8px' }}>
-              Med spa marketing built by an esthetician, <span className="grad-text">for estheticians.</span>
-            </h1>
-            <p className="lead" style={{ margin: 'var(--space-2xl) 0 0', maxWidth: 480 }}>
-              Local presence, patient reviews, and AI-powered automations that bring new patients in.
-              Everything custom — nothing templated.
-            </p>
-            <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap' }}>
-              <Link className="btn btn-primary" href="/contact">
-                Book a conversation
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </Link>
-              <a className="btn btn-ghost-light" href="#results">See client results</a>
-            </div>
-            <div className="eyebrow" style={{ color: 'var(--body)', marginTop: 'var(--space-4xl)', display: 'flex', gap: 18, flexWrap: 'wrap' }}>
-              <span>Real reviews</span>
-              <span style={{ color: 'var(--accent-magenta)' }}>·</span>
-              <span>Real rankings</span>
-              <span style={{ color: 'var(--accent-magenta)' }}>·</span>
-              <span>Real patients</span>
-            </div>
-          </div>
-
-          {/* Hero visual: composed local-listing card */}
-          <div className="hero-vis">
-            <span className="glow glow-a" />
-            <span className="glow glow-b" />
-            <span className="grain" />
-            <div className="hv-chip" style={{ top: 18, left: 18 }}>
-              <span style={{ color: '#7fd9a0' }}>▲</span>
-              <span>#14 → #1 · 30 days</span>
-            </div>
-            <div className="hv-chip" style={{ bottom: 18, right: 18 }}>
-              <span className="dotrow">
-                <i style={{ background: '#c0392b' }}/>
-                <i style={{ background: '#e67e22' }}/>
-                <i style={{ background: '#f1c40f' }}/>
-                <i style={{ background: '#7fb800' }}/>
-                <i style={{ background: '#2e9e4f' }}/>
-              </span>
-              <span>Buried → top 3</span>
-            </div>
-            <div className="hv-card">
-              <div className="hv-row">
-                <div className="hv-avatar">L</div>
-                <div>
-                  <div className="hv-name">Lumière Skin &amp; Laser</div>
-                  <div className="hv-sub">Med spa · Open now · 0.4 mi</div>
-                </div>
-                <div className="hv-rank">▲ #1 on Maps</div>
-              </div>
-              <div className="hv-row" style={{ marginTop: 14, gap: 8 }}>
-                <span className="hv-stars">★★★★★</span>
-                <span className="hv-rating">4.9</span>
-                <span className="hv-muted">· 312 reviews</span>
-              </div>
-              <div className="hv-divider" />
-              <div className="hv-sub" style={{ marginBottom: 13 }}>Recent reviews</div>
-              <div className="hv-review" style={{ marginBottom: 12 }}>
-                <span className="hv-ini" style={{ background: 'var(--accent-peach)' }}>DR</span>
-                <span className="hv-rating" style={{ fontSize: 13 }}>Dana R.</span>
-                <span className="hv-revstars">★★★★★</span>
-                <span className="hv-when">Today</span>
-              </div>
-              <div className="hv-review">
-                <span className="hv-ini" style={{ background: 'var(--accent-mint)' }}>PM</span>
-                <span className="hv-rating" style={{ fontSize: 13 }}>Priya M.</span>
-                <span className="hv-revstars">★★★★★</span>
-                <span className="hv-when">2 days ago</span>
-              </div>
-            </div>
+      <section className="band band-dark on-dark" style={{ paddingTop: 112, paddingBottom: 120, position: 'relative', overflow: 'hidden' }}>
+        <span className="hero-glow hero-glow-a" />
+        <span className="hero-glow hero-glow-b" />
+        <span className="hero-grain" />
+        <div className="wrap" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
+          <div className="eyebrow" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)' }}>Med spa marketing · by an esthetician</div>
+          <h1 className="headline" style={{ fontSize: 88, lineHeight: 1.0, letterSpacing: '-2.8px' }}>
+            Med spa marketing built by an esthetician, <span className="grad-text">for estheticians.</span>
+          </h1>
+          <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 560 }}>
+            Local presence, patient reviews, and AI-powered automations that bring new patients in.
+            Everything custom — nothing templated.
+          </p>
+          <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Link className="btn btn-primary" href="/contact">
+              Book a conversation
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </Link>
+            <a className="btn btn-ghost-dark" href="#results">See client results</a>
           </div>
         </div>
       </section>
@@ -268,7 +212,7 @@ export default function HomePage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-2xl)', marginBottom: 'var(--space-4xl)' }}>
             <div className="stat-tile tile-peach">
               <div className="stat-num">2,600%+</div>
-              <div className="stat-label">Ranking lift for one practice in its first 30 days</div>
+              <div className="stat-label">Ranking lift across one practice&apos;s target keywords</div>
             </div>
             <div className="stat-tile tile-mint">
               <div className="stat-num">2,700+</div>

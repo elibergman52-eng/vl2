@@ -60,14 +60,14 @@ export default function HomePage() {
         <div className="wrap" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
           <div className="eyebrow" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)' }}>Med spa marketing · by an esthetician</div>
           <h1 className="headline" style={{ fontSize: 88, lineHeight: 1.0, letterSpacing: '-2.8px' }}>
-            Med spa marketing built by an esthetician, <span className="grad-text">for estheticians.</span>
+            Med spa marketing built by an esthetician,<br /><span className="grad-text">for estheticians.</span>
           </h1>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 560 }}>
             Local presence, patient reviews, and AI-powered automations that bring new patients in.
             Everything custom — nothing templated.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <Link className="btn btn-primary" href="/contact">
+            <Link className="btn btn-light" href="/contact">
               Book a conversation
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </Link>
@@ -92,15 +92,38 @@ export default function HomePage() {
                 We keep you active everywhere your patients look: Google, Facebook, and Instagram.
               </p>
             </div>
-            <div className="work-img">
-              <Image
-                src="/proof/social-clean.png"
-                alt="Velvet Local keeps your Google Business Profile, Facebook, and Instagram active"
-                width={600}
-                height={480}
-                loading="lazy"
-                style={{ width: '100%', height: 'auto' }}
-              />
+            <div className="sm-wrap">
+              {/* Facebook post */}
+              <div className="sm-card" style={{ position: 'relative', zIndex: 2, marginBottom: -18 }}>
+                <div className="sm-card-hd">
+                  <div className="sm-card-av">B</div>
+                  <div style={{ flex: 1 }}>
+                    <div className="sm-card-nm">Bliss Med Spa</div>
+                    <div className="sm-card-mt">1h · 🌐</div>
+                  </div>
+                  <span style={{ color: '#65676B', fontSize: 18, lineHeight: 1, letterSpacing: 1 }}>···</span>
+                </div>
+                <p className="sm-card-body">Loving this week&apos;s microneedling results — spring facials are now open. Message us to book a spot.</p>
+                <div className="sm-card-photo" style={{ height: 100 }} />
+                <div className="sm-card-acts">
+                  <span>👍 🤍 &nbsp;5.8K</span>
+                  <span style={{ marginLeft: 'auto' }}>👍 Like</span>
+                </div>
+              </div>
+              {/* Instagram post */}
+              <div className="sm-card" style={{ marginLeft: 28, position: 'relative', zIndex: 1 }}>
+                <div className="sm-card-hd" style={{ marginBottom: 8 }}>
+                  <div className="sm-card-av" style={{ width: 28, height: 28, fontSize: 11 }}>B</div>
+                  <div>
+                    <div className="sm-card-nm" style={{ fontSize: 12 }}>Bliss Med Spa</div>
+                    <div className="sm-card-mt" style={{ fontSize: 10 }}>Los Angeles, California</div>
+                  </div>
+                </div>
+                <div className="sm-card-photo" style={{ height: 130, marginBottom: 8 }} />
+                <div style={{ display: 'flex', gap: 14, fontSize: 16, color: '#262626' }}>
+                  <span>♡</span><span>💬</span><span style={{ transform: 'rotate(-30deg)', display: 'inline-block' }}>↑</span>
+                </div>
+              </div>
             </div>
           </div>
 

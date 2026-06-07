@@ -58,7 +58,7 @@ export default function ContactPage() {
 
             <div style={{ marginTop: 'var(--space-3xl)', borderTop: '1px solid var(--hairline)', paddingTop: 'var(--space-2xl)' }}>
               <p className="lead" style={{ fontSize: 16, maxWidth: 400 }}>
-                We typically reply within <strong style={{ color: 'var(--ink)', fontWeight: 500 }}>4 business hours.</strong>{' '}
+                We typically reply within <strong style={{ color: 'var(--ink)', fontWeight: 500 }}>one business day.</strong>{' '}
                 Not the right fit? No hard feelings. Just say so.
               </p>
             </div>

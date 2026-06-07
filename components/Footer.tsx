@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
       <div className="wrap" style={{ paddingBottom: 'var(--space-3xl)', display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
         <span className="form-note">© 2026 Velvet Local. Aesthetic practice marketing, made boutique.</span>
-        <span className="form-note">We typically reply within 4 business hours.</span>
+        <span className="form-note">We typically reply within one business day.</span>
       </div>
       <div className="wordmark-banner"><span>velvet local</span></div>
     </footer>

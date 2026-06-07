@@ -257,10 +257,14 @@ img { display: block; max-width: 100%; }
 .final-cta-hl { font-size: 56px; line-height: 1.02; letter-spacing: -1.6px; max-width: 820px; margin: 0 auto; }
 
 /* ---------- responsive ---------- */
+.nav-links .nav-mobile-cta { display: none; color: var(--accent-magenta); opacity: 1; font-weight: 500; border-top: 1px solid var(--hairline); padding-top: 18px; }
+.nav-mobile-open .nav-links .nav-mobile-cta { display: block; }
+
 @media (max-width: 880px) {
   .nav-links { display: none; }
   .nav-mobile-open .nav-links { display: flex; }
   .nav-toggle { display: inline-flex; }
+  .nav-book { display: none; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .wordmark-banner span { font-size: 26vw; }
 }

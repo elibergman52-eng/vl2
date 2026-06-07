@@ -74,7 +74,7 @@ export default function ContactForm() {
             <path d="M20 6L9 17l-5-5"/>
           </svg>
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 14 }}>
-            Got it — Michelle will be in touch within 4 business hours.
+            Got it — Michelle will be in touch within one business day.
           </span>
         </div>
       )}

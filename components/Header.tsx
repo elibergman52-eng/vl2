@@ -23,9 +23,10 @@ export default function Header() {
           <Link href="/#results">Results</Link>
           <Link href="/about" className={isAbout ? 'active' : ''}>About</Link>
           <Link href="/#faq">FAQ</Link>
+          <Link href="/contact" className="nav-mobile-cta">Book a conversation</Link>
         </nav>
         <div className="nav-cta">
-          <Link className="btn btn-primary" href="/contact">Book a conversation</Link>
+          <Link className="btn btn-primary nav-book" href="/contact">Book a conversation</Link>
           <button
             className="nav-toggle btn btn-ghost-light"
             aria-label="Menu"

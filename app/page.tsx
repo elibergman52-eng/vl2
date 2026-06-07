@@ -59,7 +59,7 @@ export default function HomePage() {
         <span className="hero-grain" />
         <div className="wrap" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
           <div className="eyebrow" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)' }}>Med spa marketing · by an esthetician</div>
-          <h1 className="headline" style={{ fontSize: 88, lineHeight: 1.0, letterSpacing: '-2.8px' }}>
+          <h1 className="headline hero-hl">
             Med spa marketing built by an esthetician,<br /><span className="grad-text">for estheticians.</span>
           </h1>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 560 }}>
@@ -104,7 +104,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-2xl)' }}>
+          <div className="grid-3col">
             <article className="card">
               <div className="card-idx">01</div>
               <h3 className="card-title" style={{ marginTop: 14 }}>Local search presence</h3>
@@ -138,7 +138,7 @@ export default function HomePage() {
             Most owners obsess over the first two and miss the one that actually moves rankings.
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-2xl)' }}>
+          <div className="grid-3col">
             <article className="card-dark">
               <div className="eyebrow" style={{ color: '#8a8aa0' }}>Signal 01</div>
               <h3 className="card-title" style={{ color: 'var(--on-dark)', marginTop: 12 }}>Volume</h3>
@@ -157,7 +157,7 @@ export default function HomePage() {
           </div>
 
           {/* Free offer */}
-          <div style={{ marginTop: 'var(--space-5xl)', border: '1px solid var(--hairline-dark)', borderRadius: 'var(--rounded-sm)', padding: 'var(--space-4xl)', display: 'grid', gridTemplateColumns: '1.3fr 0.7fr', gap: 'var(--space-4xl)', alignItems: 'center' }}>
+          <div className="free-offer">
             <div>
               <span className="tag tag-dark" style={{ background: 'var(--accent-mint)', color: 'var(--ink)' }}>Free offer</span>
               <h3 className="headline" style={{ fontSize: 30, color: 'var(--on-dark)', margin: 'var(--space-lg) 0 0', lineHeight: 1.12 }}>
@@ -181,8 +181,8 @@ export default function HomePage() {
 
       {/* ========================= 003 · THE DIFFERENCE ========================= */}
       <section className="band band-light">
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 'var(--space-5xl)', alignItems: 'center' }}>
-          <div className="ph ph-grad" style={{ aspectRatio: '4/5' }} />
+        <div className="wrap diff-grid">
+          <div className="ph ph-grad diff-photo" />
           <div>
             <div className="sec-head" style={{ marginBottom: 'var(--space-2xl)' }}>
               <span className="sec-no">003 / The Difference</span>
@@ -209,7 +209,7 @@ export default function HomePage() {
             <h2 className="headline" style={{ fontSize: 40, lineHeight: 1.08 }}>Real outcomes for real practices.</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-2xl)', marginBottom: 'var(--space-4xl)' }}>
+          <div className="stats-grid">
             <div className="stat-tile tile-peach">
               <div className="stat-num">2,600%+</div>
               <div className="stat-label">Ranking lift across one practice&apos;s target keywords</div>
@@ -265,8 +265,8 @@ export default function HomePage() {
 
       {/* ========================= FAQ ========================= */}
       <section className="band band-light" id="faq">
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 'var(--space-5xl)', alignItems: 'start' }}>
-          <div style={{ position: 'sticky', top: 100 }}>
+        <div className="wrap faq-grid">
+          <div className="faq-sticky">
             <span className="sec-no">005 / Common questions</span>
             <h2 className="headline" style={{ fontSize: 36, lineHeight: 1.1, marginTop: 'var(--space-lg)', maxWidth: 360 }}>
               What med spa owners ask about marketing.
@@ -280,7 +280,7 @@ export default function HomePage() {
       {/* ========================= FINAL CTA (DARK) ========================= */}
       <section className="band band-dark on-dark">
         <div className="wrap" style={{ textAlign: 'center' }}>
-          <h2 className="headline grad-text" style={{ fontSize: 56, lineHeight: 1.02, letterSpacing: '-1.6px', maxWidth: 820, margin: '0 auto' }}>
+          <h2 className="headline grad-text final-cta-hl">
             The practice people search for first.
           </h2>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 520 }}>It starts with your Google presence. Let&apos;s build it.</p>

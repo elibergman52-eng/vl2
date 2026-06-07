@@ -92,38 +92,15 @@ export default function HomePage() {
                 We keep you active everywhere your patients look: Google, Facebook, and Instagram.
               </p>
             </div>
-            <div className="sm-wrap">
-              {/* Facebook post */}
-              <div className="sm-card" style={{ position: 'relative', zIndex: 2, marginBottom: -18 }}>
-                <div className="sm-card-hd">
-                  <div className="sm-card-av">B</div>
-                  <div style={{ flex: 1 }}>
-                    <div className="sm-card-nm">Bliss Med Spa</div>
-                    <div className="sm-card-mt">1h · 🌐</div>
-                  </div>
-                  <span style={{ color: '#65676B', fontSize: 18, lineHeight: 1, letterSpacing: 1 }}>···</span>
-                </div>
-                <p className="sm-card-body">Loving this week&apos;s microneedling results — spring facials are now open. Message us to book a spot.</p>
-                <div className="sm-card-photo" style={{ height: 100 }} />
-                <div className="sm-card-acts">
-                  <span>👍 🤍 &nbsp;5.8K</span>
-                  <span style={{ marginLeft: 'auto' }}>👍 Like</span>
-                </div>
-              </div>
-              {/* Instagram post */}
-              <div className="sm-card" style={{ marginLeft: 28, position: 'relative', zIndex: 1 }}>
-                <div className="sm-card-hd" style={{ marginBottom: 8 }}>
-                  <div className="sm-card-av" style={{ width: 28, height: 28, fontSize: 11 }}>B</div>
-                  <div>
-                    <div className="sm-card-nm" style={{ fontSize: 12 }}>Bliss Med Spa</div>
-                    <div className="sm-card-mt" style={{ fontSize: 10 }}>Los Angeles, California</div>
-                  </div>
-                </div>
-                <div className="sm-card-photo" style={{ height: 130, marginBottom: 8 }} />
-                <div style={{ display: 'flex', gap: 14, fontSize: 16, color: '#262626' }}>
-                  <span>♡</span><span>💬</span><span style={{ transform: 'rotate(-30deg)', display: 'inline-block' }}>↑</span>
-                </div>
-              </div>
+            <div className="work-img">
+              <Image
+                src="/proof/social-clean.png"
+                alt="Velvet Local keeps your Google Business Profile, Facebook, and Instagram active"
+                width={600}
+                height={480}
+                loading="lazy"
+                style={{ width: '100%', height: 'auto' }}
+              />
             </div>
           </div>
 

@@ -202,7 +202,7 @@ export default function HomePage() {
               <h3 className="card-title" style={{ color: 'var(--on-dark)', marginTop: 12 }}>Rating</h3>
               <p className="card-body" style={{ color: '#b9b9c9' }}>Your average star rating. It shapes whether searchers trust you — but on its own it won't lift your position.</p>
             </article>
-            <article className="card-dark" style={{ borderColor: 'transparent', background: 'var(--brand-gradient)' }}>
+            <article className="card-dark" style={{ borderColor: 'rgba(0,0,0,0.16)', background: 'var(--brand-gradient)', overflow: 'hidden' }}>
               <div className="eyebrow" style={{ color: 'rgba(0,0,0,.65)' }}>Signal 03 · the one that&apos;s missed</div>
               <h3 className="card-title" style={{ color: 'var(--ink)', marginTop: 12 }}>Recency</h3>
               <p className="card-body" style={{ color: 'rgba(0,0,0,.72)' }}>A wave of fresh, recent reviews signals an active, trusted practice — and it&apos;s heavily weighted in who makes the top three.</p>

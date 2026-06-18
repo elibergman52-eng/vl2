@@ -78,9 +78,6 @@ export default function AboutPage() {
               <path d="M20 220 C 160 60, 340 300, 500 70 L 500 150 C 340 380, 160 140, 20 310 Z" fill="url(#ag2)" opacity="0.55"/>
               <path d="M40 360 C 170 200, 350 420, 500 230 L 500 300 C 350 470, 170 280, 40 430 Z" fill="url(#ag1)" opacity="0.35"/>
             </svg>
-            <div style={{ position: 'absolute', bottom: 20, left: 20 }}>
-              <span className="tag tag-dark">Made boutique · since 2026</span>
-            </div>
           </div>
         </div>
       </section>

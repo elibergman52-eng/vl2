@@ -84,15 +84,15 @@ const faqItems = [
 const differenceItems = [
   {
     question: 'We only work with aesthetic practices',
-    answer: 'Solo and small-team aesthetic practices are our entire focus. Everything we do is specific to this industry — not borrowed from a general playbook.',
+    answer: 'Solo and small-team aesthetic practices are our entire focus. Everything we do is built specifically for this industry, shaped by how aesthetic patients actually choose.',
   },
   {
     question: 'Founded by an esthetician',
-    answer: 'Most agencies learn your world from the outside. We\'ve lived inside it — which changes what we prioritize and what we\'ll never try to sell you.',
+    answer: 'We\'ve worked inside aesthetic practices ourselves. That lived experience shapes what we prioritize and how we guide your marketing toward the patients you want.',
   },
   {
     question: 'Everything custom, nothing templated',
-    answer: 'We discuss your goals, your market, and what\'s actually missing before recommending anything. You\'ll never pay for something your practice doesn\'t need.',
+    answer: 'We start with your goals, your market, and what would move your practice forward, then build around exactly that. You only ever invest in what helps you grow.',
   },
 ]
 
@@ -235,7 +235,32 @@ export default function HomePage() {
       {/* ========================= 003 · THE DIFFERENCE ========================= */}
       <section className="band band-light">
         <div className="wrap diff-grid">
-          <div className="ph ph-grad diff-photo" />
+          <div
+            className="diff-photo"
+            style={{
+              background: 'var(--canvas-dark)',
+              border: '1px solid var(--hairline-dark)',
+              borderRadius: 'var(--rounded-sm)',
+              padding: 'var(--space-4xl)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              color: 'var(--on-dark)',
+            }}
+          >
+            <span className="eyebrow" style={{ color: 'var(--accent-periwinkle)' }}>
+              Founder &amp; Esthetician
+            </span>
+            <blockquote style={{ margin: 0, paddingLeft: 'var(--space-2xl)', borderLeft: '2px solid var(--accent-magenta)' }}>
+              <p className="headline" style={{ fontSize: 26, lineHeight: 1.25, letterSpacing: '-0.5px', color: 'var(--on-dark)' }}>
+                &quot;I&apos;ve worked inside aesthetic practices. I know exactly what makes a patient choose you.&quot;
+              </p>
+            </blockquote>
+            <div>
+              <div className="card-title" style={{ color: 'var(--on-dark)' }}>Michelle Bergman</div>
+              <div className="sec-no" style={{ marginTop: 'var(--space-xs)' }}>Founder, Velvet Local</div>
+            </div>
+          </div>
           <div>
             <div className="sec-head" style={{ marginBottom: 'var(--space-2xl)' }}>
               <span className="sec-no">003 / The Difference</span>
@@ -245,7 +270,7 @@ export default function HomePage() {
             </h2>
             <p className="lead" style={{ margin: 'var(--space-2xl) 0 var(--space-3xl)', maxWidth: 520 }}>
               Michelle Bergman is an esthetician. She built Velvet Local because she&apos;s worked inside aesthetic
-              practices and knows exactly what moves the needle — and what doesn&apos;t.
+              practices and knows exactly what moves the needle for them.
             </p>
             <Accordion items={differenceItems} defaultOpen={0} />
           </div>

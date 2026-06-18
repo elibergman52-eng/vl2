@@ -2,10 +2,12 @@
 
 import { useState, FormEvent } from 'react'
 
-// Set NEXT_PUBLIC_FORMSPREE_ID in .env.local (e.g. NEXT_PUBLIC_FORMSPREE_ID=abcdefgh)
-const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ID
-  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
-  : null
+// Submissions POST to an n8n webhook that emails Michelle the lead.
+// Override with NEXT_PUBLIC_CONTACT_WEBHOOK_URL; the production URL is the fallback
+// so it works on Vercel without env setup (.env.local is gitignored).
+const WEBHOOK_URL =
+  process.env.NEXT_PUBLIC_CONTACT_WEBHOOK_URL ||
+  'https://elib.app.n8n.cloud/webhook/velvet-local-contact'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
@@ -14,26 +16,25 @@ export default function ContactForm() {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const form = e.currentTarget
-    const name = (form.elements.namedItem('name') as HTMLInputElement).value.trim()
-    const email = (form.elements.namedItem('email') as HTMLInputElement).value.trim()
+    const data = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value.trim(),
+      practice: (form.elements.namedItem('practice') as HTMLInputElement).value.trim(),
+      email: (form.elements.namedItem('email') as HTMLInputElement).value.trim(),
+      city: (form.elements.namedItem('city') as HTMLInputElement).value.trim(),
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim(),
+    }
     const errs: typeof errors = {}
-    if (!name) errs.name = true
-    if (!email) errs.email = true
+    if (!data.name) errs.name = true
+    if (!data.email) errs.email = true
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
     setStatus('sending')
 
-    if (!FORMSPREE_ENDPOINT) {
-      console.warn('ContactForm: NEXT_PUBLIC_FORMSPREE_ID is not set — form will not submit.')
-      setTimeout(() => { form.reset(); setStatus('sent') }, 700)
-      return
-    }
-
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(form),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       })
       if (res.ok) {
         form.reset()

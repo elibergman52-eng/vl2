@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -89,7 +90,16 @@ export default function AboutPage() {
       {/* ========================= THE FOUNDER ========================= */}
       <section className="band band-light">
         <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 'var(--space-5xl)', alignItems: 'center' }}>
-          <div className="ph ph-grad" style={{ aspectRatio: '4/5' }} />
+          <div className="ph" style={{ aspectRatio: '4/5' }}>
+            <Image
+              src="/founder-michelle.webp"
+              alt="Michelle Bergman, founder and esthetician at Velvet Local"
+              width={850}
+              height={1062}
+              priority
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          </div>
           <div>
             <span className="sec-no">001 / The Founder</span>
             <h2 className="headline" style={{ fontSize: 38, lineHeight: 1.08, marginTop: 'var(--space-lg)', maxWidth: 520 }}>

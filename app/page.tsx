@@ -236,29 +236,27 @@ export default function HomePage() {
       <section className="band band-light">
         <div className="wrap diff-grid">
           <div
-            className="diff-photo"
+            className="diff-photo ph-grad"
             style={{
-              background: 'var(--canvas-dark)',
-              border: '1px solid var(--hairline-dark)',
               borderRadius: 'var(--rounded-sm)',
               padding: 'var(--space-4xl)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
-              color: 'var(--on-dark)',
+              color: '#ffffff',
             }}
           >
-            <span className="eyebrow" style={{ color: 'var(--accent-periwinkle)' }}>
+            <span className="eyebrow" style={{ color: '#ffffff' }}>
               Founder &amp; Esthetician
             </span>
-            <blockquote style={{ margin: 0, paddingLeft: 'var(--space-2xl)', borderLeft: '2px solid var(--accent-magenta)' }}>
-              <p className="headline" style={{ fontSize: 26, lineHeight: 1.25, letterSpacing: '-0.5px', color: 'var(--on-dark)' }}>
+            <blockquote style={{ margin: 0, paddingLeft: 'var(--space-2xl)', borderLeft: '2px solid rgba(255,255,255,0.7)' }}>
+              <p className="headline" style={{ fontSize: 26, lineHeight: 1.25, letterSpacing: '-0.5px', color: '#ffffff' }}>
                 &quot;I&apos;ve worked inside aesthetic practices. I know exactly what makes a patient choose you.&quot;
               </p>
             </blockquote>
             <div>
-              <div className="card-title" style={{ color: 'var(--on-dark)' }}>Michelle Bergman</div>
-              <div className="sec-no" style={{ marginTop: 'var(--space-xs)' }}>Founder, Velvet Local</div>
+              <div className="card-title" style={{ color: '#ffffff' }}>Michelle Bergman</div>
+              <div className="sec-no" style={{ marginTop: 'var(--space-xs)', color: 'rgba(255,255,255,0.8)' }}>Founder, Velvet Local</div>
             </div>
           </div>
           <div>

@@ -46,8 +46,8 @@ export default function AboutPage() {
               Built by someone who actually <span className="grad-text">knows this world.</span>
             </h1>
             <p className="lead" style={{ margin: 'var(--space-2xl) 0 0', maxWidth: 500 }}>
-              Velvet Local is a boutique marketing studio for aesthetic practices — founded by an esthetician,
-              focused entirely on solo and small-team practices, and built around the one thing most agencies get wrong.
+              Velvet Local is a boutique marketing studio for aesthetic practices, founded by an esthetician.
+              We focus entirely on solo and small-team practices, and we build around the one thing that makes them grow.
             </p>
             <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap' }}>
               <Link className="btn btn-primary" href="/contact">
@@ -107,16 +107,16 @@ export default function AboutPage() {
             </h2>
             <p className="lead" style={{ margin: 'var(--space-2xl) 0 0', maxWidth: 540 }}>
               Michelle is an esthetician. She built Velvet Local because she&apos;s worked inside aesthetic practices and
-              knows exactly what moves the needle — and what doesn&apos;t.
+              knows exactly what moves the needle for them.
             </p>
             <p className="lead" style={{ margin: 'var(--space-lg) 0 0', maxWidth: 540 }}>
               That context changes everything. It&apos;s the difference between an agency that learns your world from the
-              outside and a partner who has lived in it — who knows how patients choose, why a quiet Google profile
-              costs you bookings, and which &quot;marketing&quot; is just noise for a practice like yours.
+              outside and a partner who has lived in it. Someone who knows how patients choose, how a strong Google
+              profile fills your calendar, and which marketing genuinely earns a practice like yours more bookings.
             </p>
             <blockquote style={{ margin: 'var(--space-3xl) 0 0', paddingLeft: 'var(--space-2xl)', borderLeft: '2px solid var(--accent-magenta)' }}>
               <p className="headline" style={{ fontSize: 24, lineHeight: 1.25, letterSpacing: '-0.4px', maxWidth: 520 }}>
-                &quot;Solo owners deserve a partner who actually understands their scale — and their goals.&quot;
+                &quot;Solo owners deserve a partner who actually understands their scale and their goals.&quot;
               </p>
             </blockquote>
           </div>
@@ -167,8 +167,8 @@ export default function AboutPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--space-2xl)' }}>
             {[
               { step: 'Step 01', title: 'A conversation', body: 'A 15-minute call about where your practice stands and what it would take to rank first. No pitch deck.' },
-              { step: 'Step 02', title: 'Free review revival', body: 'We reach back out to your past patients and bring in a wave of fresh reviews — at no cost, so you feel the effect first.' },
-              { step: 'Step 03', title: 'Build the presence', body: 'A custom plan for local search, reviews, and AI automations — sized to your market and your goals.' },
+              { step: 'Step 02', title: 'Free review revival', body: 'We reach back out to your past patients and bring in a wave of fresh reviews at no cost, so you feel the effect first.' },
+              { step: 'Step 03', title: 'Build the presence', body: 'A custom plan for local search, reviews, and AI automations, sized to your market and your goals.' },
               { step: 'Step 04', title: 'Track what matters', body: 'Clear expectations set up front, tracked against rankings, profile actions, and bookings as results come in.' },
             ].map(({ step, title, body }) => (
               <div key={step} style={{ borderTop: '1px solid var(--hairline)', paddingTop: 'var(--space-lg)' }}>
@@ -212,7 +212,7 @@ export default function AboutPage() {
             Let&apos;s talk about your practice.
           </h2>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 480 }}>
-            Book a 15-minute call. No pressure, no pitch deck — just a conversation.
+            Book a 15-minute call. No pressure, no pitch deck, just a conversation.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', marginTop: 'var(--space-3xl)', flexWrap: 'wrap' }}>
             <Link className="btn btn-light" href="/contact">

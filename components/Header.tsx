@@ -23,10 +23,10 @@ export default function Header() {
           <Link href="/#results">Results</Link>
           <Link href="/about" className={isAbout ? 'active' : ''}>About</Link>
           <Link href="/#faq">FAQ</Link>
-          <Link href="/contact" className="nav-mobile-cta">Book a conversation</Link>
+          <a href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer" className="nav-mobile-cta">Book a conversation</a>
         </nav>
         <div className="nav-cta">
-          <Link className="btn btn-primary nav-book" href="/contact">Book a conversation</Link>
+          <a className="btn btn-primary nav-book" href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">Book a conversation</a>
           <button
             className="nav-toggle btn btn-ghost-light"
             aria-label="Menu"

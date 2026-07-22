@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="foot-h">Talk to us</div>
           <div className="foot-links">
             <a href="mailto:michelle@velvetlocal.com">michelle@velvetlocal.com</a>
-            <Link href="/contact">Book a conversation</Link>
+            <a href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">Book a conversation</a>
             <Link href="/#faq">FAQ</Link>
           </div>
         </div>

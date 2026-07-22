@@ -111,7 +111,7 @@ export default function HomePage() {
         <span className="hero-glow hero-glow-b" />
         <span className="hero-grain" />
         <div className="wrap" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-          <div className="eyebrow" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)' }}>Med spa marketing · by an esthetician</div>
+          <Link className="eyebrow" href="/#how-it-works" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)', textDecoration: 'none', display: 'inline-block' }}>Get a Free Revival Review</Link>
           <h1 className="headline hero-hl">
             Med spa marketing built by an esthetician,<br /><span className="grad-text">for estheticians.</span>
           </h1>
@@ -120,10 +120,10 @@ export default function HomePage() {
             Everything custom — nothing templated.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap', justifyContent: 'center' }}>
-            <Link className="btn btn-light" href="/contact">
+            <a className="btn btn-light" href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">
               Book a conversation
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </Link>
+            </a>
             <a className="btn btn-ghost-dark" href="#results">See client results</a>
           </div>
         </div>
@@ -361,10 +361,10 @@ export default function HomePage() {
           </h2>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 520 }}>It starts with your Google presence. Let&apos;s build it.</p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', marginTop: 'var(--space-3xl)', flexWrap: 'wrap' }}>
-            <Link className="btn btn-light" href="/contact">
+            <a className="btn btn-light" href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">
               Book a conversation
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </Link>
+            </a>
             <a className="btn btn-ghost-dark" href="mailto:michelle@velvetlocal.com">Email michelle@velvetlocal.com</a>
           </div>
         </div>

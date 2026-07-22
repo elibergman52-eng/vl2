@@ -50,10 +50,10 @@ export default function AboutPage() {
               We focus entirely on solo and small-team practices, and we build around the one thing that makes them grow.
             </p>
             <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap' }}>
-              <Link className="btn btn-primary" href="/contact">
+              <a className="btn btn-primary" href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">
                 Book a conversation
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </Link>
+              </a>
               <Link className="btn btn-ghost-light" href="/#results">See client results</Link>
             </div>
           </div>
@@ -212,10 +212,10 @@ export default function AboutPage() {
             Book a 15-minute call. No pressure, no pitch deck, just a conversation.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', justifyContent: 'center', marginTop: 'var(--space-3xl)', flexWrap: 'wrap' }}>
-            <Link className="btn btn-light" href="/contact">
+            <a className="btn btn-light" href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">
               Book a conversation
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </Link>
+            </a>
             <a className="btn btn-ghost-dark" href="mailto:michelle@velvetlocal.com">Email michelle@velvetlocal.com</a>
           </div>
         </div>

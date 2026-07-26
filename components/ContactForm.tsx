@@ -49,7 +49,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-lg)' }}>
+      <div className="form-row">
         <div className="field">
           <label htmlFor="f-name">Your name</label>
           <input

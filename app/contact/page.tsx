@@ -22,12 +22,12 @@ export default function ContactPage() {
 
       {/* ========================= CONTACT ========================= */}
       <section className="band band-light" id="start" style={{ paddingTop: 64 }}>
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '0.95fr 1.05fr', gap: 'var(--space-5xl)', alignItems: 'start' }}>
+        <div className="wrap contact-grid">
 
           {/* Left: pitch + details */}
           <div>
             <div className="eyebrow" style={{ color: 'var(--body)', marginBottom: 'var(--space-2xl)' }}>Let&apos;s talk</div>
-            <h1 className="headline" style={{ fontSize: 50, lineHeight: 1.04, letterSpacing: '-1.5px', maxWidth: 460 }}>
+            <h1 className="headline contact-hl">
               Ready to see what this looks like for <span className="grad-text">your practice?</span>
             </h1>
             <p className="lead" style={{ margin: 'var(--space-2xl) 0 0', maxWidth: 440 }}>
@@ -84,7 +84,7 @@ export default function ContactPage() {
 
       {/* ========================= REASSURANCE STRIP (DARK) ========================= */}
       <section className="band band-dark on-dark" style={{ padding: 'var(--space-5xl) 0' }}>
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-2xl)' }}>
+        <div className="wrap reassure-grid">
           <div>
             <div className="eyebrow" style={{ color: '#8a8aa0' }}>No pressure</div>
             <p className="lead" style={{ marginTop: 10, maxWidth: 300 }}>It&apos;s a conversation, not a sales pitch. You&apos;ll leave knowing where you stand either way.</p>

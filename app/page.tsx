@@ -111,13 +111,12 @@ export default function HomePage() {
         <span className="hero-glow hero-glow-b" />
         <span className="hero-grain" />
         <div className="wrap" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-          <Link className="eyebrow" href="/#how-it-works" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)', textDecoration: 'none', display: 'inline-block' }}>Get a Free Revival Review</Link>
+          <Link className="eyebrow" href="/#free-offer" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)', textDecoration: 'none', display: 'inline-block' }}>Get a Free Review Revival</Link>
           <h1 className="headline hero-hl">
             Med spa marketing built by an esthetician,<br /><span className="grad-text">for estheticians.</span>
           </h1>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 560 }}>
-            Local presence, patient reviews, and AI-powered automations that bring new patients in.
-            Everything custom — nothing templated.
+            Booked chairs and the peace of mind to run your practice and pour into your craft.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap', justifyContent: 'center' }}>
             <a className="btn btn-light" href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">
@@ -210,7 +209,7 @@ export default function HomePage() {
           </div>
 
           {/* Free offer */}
-          <div className="free-offer">
+          <div className="free-offer" id="free-offer" style={{ scrollMarginTop: 90 }}>
             <div>
               <span className="tag tag-dark" style={{ background: 'var(--accent-mint)', color: 'var(--ink)' }}>Free offer</span>
               <h3 className="headline" style={{ fontSize: 30, color: 'var(--on-dark)', margin: 'var(--space-lg) 0 0', lineHeight: 1.12 }}>

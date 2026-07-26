@@ -39,10 +39,10 @@ export default function AboutPage() {
 
       {/* ========================= HERO ========================= */}
       <section className="band band-light" style={{ paddingTop: 56, paddingBottom: 56 }}>
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'var(--space-5xl)', alignItems: 'center' }}>
+        <div className="wrap about-hero">
           <div>
             <div className="eyebrow" style={{ color: 'var(--body)', marginBottom: 'var(--space-2xl)' }}>About · Velvet Local</div>
-            <h1 className="headline" style={{ fontSize: 54, lineHeight: 1.04, letterSpacing: '-1.6px', maxWidth: 560 }}>
+            <h1 className="headline about-hero-hl">
               Built by someone who actually <span className="grad-text">knows this world.</span>
             </h1>
             <p className="lead" style={{ margin: 'var(--space-2xl) 0 0', maxWidth: 500 }}>
@@ -58,8 +58,8 @@ export default function AboutPage() {
             </div>
           </div>
           <div
-            className="ph"
-            style={{ aspectRatio: '5/4.6', background: 'var(--canvas-dark)', borderColor: 'var(--hairline-dark)', padding: 0 }}
+            className="ph about-ribbon"
+            style={{ background: 'var(--canvas-dark)', borderColor: 'var(--hairline-dark)', padding: 0 }}
           >
             <svg className="ribbon" viewBox="0 0 520 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
               <defs>
@@ -86,8 +86,8 @@ export default function AboutPage() {
 
       {/* ========================= THE FOUNDER ========================= */}
       <section className="band band-light">
-        <div className="wrap" style={{ display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 'var(--space-5xl)', alignItems: 'center' }}>
-          <div className="ph" style={{ aspectRatio: '4/5' }}>
+        <div className="wrap founder-grid">
+          <div className="ph founder-photo">
             <Image
               src="/founder-michelle.webp"
               alt="Michelle Bergman, founder and esthetician at Velvet Local"
@@ -129,7 +129,7 @@ export default function AboutPage() {
               A few convictions that shape everything we do.
             </h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'var(--space-2xl)' }}>
+          <div className="convictions-grid">
             <article className="card-dark">
               <div className="card-idx">01</div>
               <h3 className="card-title" style={{ color: 'var(--on-dark)', marginTop: 12 }}>Only aesthetic practices</h3>
@@ -161,7 +161,7 @@ export default function AboutPage() {
             <span className="sec-no">003 / How We Work</span>
             <h2 className="headline" style={{ fontSize: 38, lineHeight: 1.08 }}>From first call to top of the map.</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--space-2xl)' }}>
+          <div className="steps-grid">
             {[
               { step: 'Step 01', title: 'A conversation', body: 'A 15-minute call about where your practice stands and what it would take to rank first. No pitch deck.' },
               { step: 'Step 02', title: 'Free review revival', body: 'We reach back out to your past patients and bring in a wave of fresh reviews at no cost, so you feel the effect first.' },
@@ -184,7 +184,7 @@ export default function AboutPage() {
       <section className="band band-light">
         <div className="wrap">
           <span className="sec-no">004 / By The Numbers</span>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-2xl)', marginTop: 'var(--space-2xl)' }}>
+          <div className="grid-3col" style={{ marginTop: 'var(--space-2xl)' }}>
             <div className="stat-tile tile-peach">
               <div className="stat-num">2,600%+</div>
               <div className="stat-label">Ranking lift for one practice in its first 30 days</div>
@@ -205,7 +205,7 @@ export default function AboutPage() {
       {/* ========================= FINAL CTA (DARK) ========================= */}
       <section className="band band-dark on-dark">
         <div className="wrap" style={{ textAlign: 'center' }}>
-          <h2 className="headline grad-text" style={{ fontSize: 52, lineHeight: 1.04, letterSpacing: '-1.5px', maxWidth: 780, margin: '0 auto' }}>
+          <h2 className="headline grad-text final-cta-hl">
             Let&apos;s talk about your practice.
           </h2>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 480 }}>

@@ -74,6 +74,21 @@ img { display: block; max-width: 100%; }
 
 /* ---------- type helpers ---------- */
 .eyebrow { font-family: var(--font-mono); font-weight: 500; font-size: 11px; letter-spacing: 0.55px; text-transform: uppercase; }
+
+/* clickable hero eyebrow (links to the free offer) */
+.hero-eyebrow-link {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: var(--font-mono); font-weight: 500; font-size: 13px;
+  letter-spacing: 0.55px; text-transform: uppercase; color: #fff; text-decoration: none;
+  padding: 9px 18px; border-radius: var(--rounded-full);
+  border: 1px solid var(--hairline-dark); background: rgba(255, 255, 255, 0.05);
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.hero-eyebrow-link .dot { width: 7px; height: 7px; border-radius: 9999px; background: var(--accent-mint); flex: none; }
+.hero-eyebrow-link svg { width: 14px; height: 14px; transition: transform .2s ease; }
+.hero-eyebrow-link:hover { background: rgba(255, 255, 255, 0.12); border-color: #4a4a63; }
+.hero-eyebrow-link:hover svg { transform: translateX(3px); }
+.hero-eyebrow-link:focus-visible { outline: 2px solid var(--accent-mint); outline-offset: 3px; }
 .headline { margin: 0; font-family: var(--font-display); font-weight: var(--weight-medium); letter-spacing: -0.8px; }
 .lead { font-family: var(--font-display); font-weight: 400; font-size: 18px; line-height: 1.45; letter-spacing: -0.18px; color: var(--body); }
 .on-dark .lead { color: #b9b9c9; }

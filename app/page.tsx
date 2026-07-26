@@ -111,7 +111,11 @@ export default function HomePage() {
         <span className="hero-glow hero-glow-b" />
         <span className="hero-grain" />
         <div className="wrap" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 860, margin: '0 auto' }}>
-          <Link className="eyebrow" href="/#free-offer" style={{ color: '#8a8aa0', marginBottom: 'var(--space-2xl)', textDecoration: 'none', display: 'inline-block' }}>Get a Free Review Revival</Link>
+          <Link className="hero-eyebrow-link" href="/#free-offer" style={{ marginBottom: 'var(--space-2xl)' }}>
+            <span className="dot" aria-hidden="true" />
+            Get a Free Review Revival
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </Link>
           <h1 className="headline hero-hl">
             Med spa marketing built by an esthetician,<br /><span className="grad-text">for estheticians.</span>
           </h1>

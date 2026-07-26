@@ -116,7 +116,7 @@ export default function HomePage() {
             Med spa marketing built by an esthetician,<br /><span className="grad-text">for estheticians.</span>
           </h1>
           <p className="lead" style={{ margin: 'var(--space-2xl) auto 0', maxWidth: 560 }}>
-            Booked chairs and the peace of mind to run your practice and pour into your craft.
+            Booked chairs and the peace of mind to run your practice and do the work you love.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-md)', marginTop: 'var(--space-3xl)', flexWrap: 'wrap', justifyContent: 'center' }}>
             <a className="btn btn-light" href="https://calendly.com/eli-velvetlocal/30min" target="_blank" rel="noopener noreferrer">
